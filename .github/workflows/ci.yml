@@ -1,0 +1,35 @@
+name: Fast API app linting, testing, docker build and push
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+
+  lint_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Python Version
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.9'
+      
+      - name: Create and start virtual environment
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+      
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      
+      - name: Linting
+        run: flake8 --exclude .venv .
+
+      - name: Pytest
+        run: pytest
+      

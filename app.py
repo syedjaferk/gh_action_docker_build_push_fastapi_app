@@ -6,4 +6,4 @@ app = FastAPI()
 
 @app.get("/")
 async def index():
-   return {"message": "Hello World", "id": IdGenerator().get_random_id()}
+    return {"message": "Hello World", "id": IdGenerator().get_random_id()}
