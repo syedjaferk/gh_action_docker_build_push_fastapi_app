@@ -1,0 +1,21 @@
+Events:
+
+Repository Related:
+1. push
+2. pull_request
+3. create
+4. fork
+5. issues
+6. issue_comment
+7. watch - starred
+8. discussion
+
+Other:
+
+1. workflow_dispatch - manual
+2. repository_dispatch - via rest api
+3. schedule - scheduled
+4. workflow_call
+
+
+
