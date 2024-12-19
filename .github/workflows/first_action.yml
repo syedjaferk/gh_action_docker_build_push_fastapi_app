@@ -10,3 +10,7 @@ jobs:
         run: echo "Hello World"
       - name: Print Goodbye
         run: echo "Done - bye!"
+      - name: multi line command
+        run: |
+          echo "First Output"
+          echo "Second Output"
